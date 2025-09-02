@@ -357,9 +357,26 @@ def eeg_mha_dc_speech_gru_dc_model(
     eeg_proj_1 = transformer_block_1(eeg)
 
     # Gated Recurrent Unit
-    gru_model = tf.keras.layers.GRU(env_input_dimension, return_sequences=True)
-    env_proj_1 = gru_model(env1)
-    env_proj_2 = gru_model(env2)
+    model = tf.keras.layers.GRU(env_input_dimension, return_sequences=True)
+
+    # Bidirectional Gated Recurrent Unit
+    # model = tf.keras.layers.Bidirectional(tf.keras.layers.GRU(env_input_dimension, return_sequences=True))
+
+    # Recurrent Neural Network
+    # model = tf.keras.layers.SimpleRNN(env_input_dimension, return_sequences=True, return_state=False)
+
+    # Bidirectional Recurrent Neural Network
+    # model = tf.keras.layers.Bidirectional(tf.keras.layers.SimpleRNN(env_input_dimension, return_sequences=True, return_state=False))
+
+    # Long short-term memory
+    # model = tf.keras.layers.LSTM(env_input_dimension, dropout=0.25, recurrent_dropout=0.1, return_sequences=True)
+
+    # Bidirectional Long short-term memory
+    # model = tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(env_input_dimension, dropout=0.25, recurrent_dropout=0.1, return_sequences=True))
+
+    
+    env_proj_1 = model(env1)
+    env_proj_2 = model(env2)
 
     # Construct dilation layers
     for layer_index in range(layers):
