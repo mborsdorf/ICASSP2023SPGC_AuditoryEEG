@@ -52,10 +52,10 @@ This .yml file can be used to install a conda environment for running the experi
 Please change the path in the icassp.yml file according to your system.
 > prefix: ADD_PATH_HERE/anaconda3/envs/icassp
 
-## Our Paper
+## Our Papers
 If you enjoyed working with our solution, please cite us:
 ```
-@INPROCEEDINGS{10096959,
+@INPROCEEDINGS{Borsdorf2023ICASSP,
   author={Borsdorf, Marvin and Pahuja, Saurav and Ivucic, Gabriel and Cai, Siqi and Li, Haizhou and Schultz, Tanja},
   booktitle={ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
   title={Multi-Head Attention and GRU for Improved Match-Mismatch Classification of Speech Stimulus and EEG Response},
@@ -66,3 +66,17 @@ If you enjoyed working with our solution, please cite us:
   doi={10.1109/ICASSP49357.2023.10096959}}
 
 ```
+
+```
+@ARTICLE{Borsdorf2024OJSP,
+  author={Borsdorf, Marvin and Cai, Siqi and Pahuja, Saurav and De Silva, Dashanka and Li, Haizhou and Schultz, Tanja},
+  journal={IEEE Open Journal of Signal Processing}, 
+  title={Attention and Sequence Modeling for Match-Mismatch Classification of Speech Stimulus and EEG Response}, 
+  year={2024},
+  volume={5},
+  number={},
+  pages={799-809},
+  keywords={Electroencephalography;Brain modeling;Task analysis;Speech processing;Decoding;Signal processing;Benchmark testing;Auditory system;EEG decoding;match-mismatch classification;speech envelope;speech stimulus},
+  doi={10.1109/OJSP.2023.3340063}}
+```
+
